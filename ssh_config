@@ -1,0 +1,25 @@
+# add keys to ssh-agent
+AddKeysToAgent yes
+IdentityFile ~/.ssh/id_rsa
+IdentityFile ~/.ssh/gitoa_id_rsa
+IdentityFile ~/.ssh/github_id_rsa
+
+# set keys for Host
+Host git@git.woa.com
+    HostName git.woa.com
+    User git
+    PreferredAuthentications publickey
+    IdentityFile ~/.ssh/gitoa_id_rsa
+
+Host git@git.code.oa.com
+    HostName git.code.oa.com
+    User git
+    PreferredAuthentications publickey
+    IdentityFile ~/.ssh/gitoa_id_rsa
+
+Host git@github.com
+    HostName github.com 
+    User git
+    PreferredAuthentications publickey
+    IdentityFile ~/.ssh/github_id_rsa
+
